@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Beer from './image/Beer.png';
 
 const HeaderStyle = styled.div`
-  background-color: green;
+  background-color: black;
 `;
 
 const BodyStyle = styled.div`
