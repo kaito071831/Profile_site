@@ -6,6 +6,7 @@ const NavUl = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 `;
 
 const NavLi = styled.li`
@@ -22,11 +23,17 @@ const NavA = styled.a`
   color: #fff;
   font-weight: bold;
   vertical-align: middle;
+  display: block;
+  height: 100%;
+  width: 100%;
 `;
 
 const HeadTitle = styled.h1`
   text-align: center;
-  margin-top: 0;
+  vertical-align: middle;
+  margin: 0;
+  padding: 10px;
+  color: white;
 `;
 
 export const Header: React.FC =  () => {
