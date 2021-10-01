@@ -12,7 +12,7 @@ type Props = {
   name: string;
 }
 
-const HCardStyle = styled.div`
+export const HCardStyle = styled.div`
   text-align: center;
 `;
 

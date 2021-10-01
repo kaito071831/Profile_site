@@ -12,7 +12,6 @@ type Props = {
 }
 
 const LangCard: React.FC<Props> = ({name, image}) => {
-
   return(
     <>
       <LCardStyle>

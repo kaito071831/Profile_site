@@ -1,11 +1,9 @@
 import React from "react";
 import hist from '../json/history.json';
 import { Container } from '@mui/material';
-import styled from "styled-components";
+import { HCardStyle } from "./HobbyCard";
 
-const Topic = styled.h3`
-  text-align: center;
-`;
+const Topic = HCardStyle.withComponent('h3')
 
 export const History: React.FC = () => {
   return(

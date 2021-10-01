@@ -8,7 +8,7 @@ import { Hobby } from './Hobby';
 import styled from 'styled-components';
 
 const IntroStyle = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   filter:
     drop-shadow(
       1px 2px 8px hsla(0, 0%, 0%, 0.5)

@@ -22,7 +22,6 @@ const NavA = styled.a`
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  vertical-align: middle;
   display: block;
   height: 100%;
   width: 100%;
@@ -32,7 +31,7 @@ const HeadTitle = styled.h1`
   text-align: center;
   vertical-align: middle;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
   color: white;
 `;
 
