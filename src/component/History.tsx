@@ -10,7 +10,7 @@ const Topic = styled.h3`
 export const History: React.FC = () => {
   return(
     <>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Topic>Educational background</Topic>
         <ul>
           {hist.school.map((data) => (
