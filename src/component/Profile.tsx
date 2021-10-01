@@ -3,6 +3,7 @@ import Image from '../image/ProfileImg.png';
 import styled from "styled-components";
 import { Container, Grid } from '@mui/material';
 import { ICStyle } from './IntroCard';
+import MyProf from '../json/profile.json';
 
 const GTitle = styled.a`
   @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
@@ -23,28 +24,13 @@ export const Profile: React.FC = () => {
           <Grid item xs>
             <table>
               <tbody>
-                <tr>
-                  <td><GTitle>Name</GTitle></td>
-                  <td>Kaito Sakao</td>
-                </tr>
-                <tr>
-                  <td><GTitle>Gender</GTitle></td>
-                  <td>Male</td>
-                </tr>
-                <tr>
-                  <td><GTitle>Date of birth</GTitle></td>
-                  <td>07/18/2000</td>
-                </tr>
-                <tr>
-                  <td><GTitle>Birth place</GTitle></td>
-                  <td>Kanazawa, Japan</td>
-                </tr>
-                <tr>
-                  <td><GTitle>Contact</GTitle></td>
-                  <td>kaito.contactDev@gmail.com</td>
-                </tr>
+                {MyProf.profile.map((content) => (
+                  <tr>
+                    <td><GTitle>{content.title}</GTitle></td>
+                    <td>{content.body}</td>
+                  </tr>
+                ))}
               </tbody>
-              
             </table>
           </Grid>
         </Grid>

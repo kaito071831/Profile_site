@@ -1,0 +1,24 @@
+{
+  "profile":[
+    {
+      "title": "Name",
+      "body": "Kaito Sakao"
+    },
+    {
+      "title": "Gender",
+      "body": "Male"
+    },
+    {
+      "title": "Date of birth",
+      "body": "07/18/2000"
+    },
+    {
+      "title": "Birth place",
+      "body": "Kanazawa, Japan"
+    },
+    {
+      "title": "Contact",
+      "body": "kaito.contactDev@gmail.com"
+    }
+  ]
+}
