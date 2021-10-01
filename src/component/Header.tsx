@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Menu from '../json/nav.json';
 
 const NavUl = styled.ul`
   list-style: none;
@@ -35,10 +36,9 @@ export const Header: React.FC =  () => {
         <nav>
           <HeadTitle>Kaito Sakao Profile</HeadTitle>
           <NavUl>
-            <NavLi><NavA href="#profile">Profile</NavA></NavLi>
-            <NavLi><NavA href="#hobby">Hobby</NavA></NavLi>
-            <NavLi><NavA href="#lang">Language</NavA></NavLi>
-            <NavLi><NavA href="#history">History</NavA></NavLi>
+            {Menu.menu.map((topic) => (
+              <NavLi><NavA href={topic.URL}>{topic.title}</NavA></NavLi>
+            ))}
           </NavUl>
         </nav>
       </header>

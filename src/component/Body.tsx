@@ -9,6 +9,16 @@ import styled from 'styled-components';
 
 const IntroStyle = styled.div`
   margin-bottom: 10px;
+  filter:
+    drop-shadow(
+      1px 2px 8px hsla(0, 0%, 0%, 0.5)
+    )
+    drop-shadow(
+      2px 4px 16px hsla(0, 0%, 0%, 0.5)
+    )
+    drop-shadow(
+      4px 8px 32px hsla(0, 0%, 0%, 0.5)
+    );
 `;
 
 const Body: React.FC = () => {

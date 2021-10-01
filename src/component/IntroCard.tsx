@@ -19,7 +19,7 @@ const IntroCard: React.FC<Props> = (props) => {
     <>
       <article>
         <ICStyle>
-          <h3><a id={id}>{title}</a></h3>
+          <h2><a id={id}>{title}</a></h2>
         </ICStyle>
         <div>
           {plain}

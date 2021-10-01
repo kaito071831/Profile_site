@@ -13,6 +13,8 @@ const HeaderStyle = styled.div`
 const BodyStyle = styled.div`
   background-image: url(${Beer});
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding: 10px 0px 10px 0px;
 `;
 

@@ -1,15 +1,29 @@
 import React from "react";
+import hist from '../json/history.json';
+import { Container } from '@mui/material';
+import styled from "styled-components";
+
+const Topic = styled.h3`
+  text-align: center;
+`;
 
 export const History: React.FC = () => {
   return(
     <>
-      <div>
+      <Container maxWidth="lg">
+        <Topic>Educational background</Topic>
         <ul>
-          <li>2016: Enrolled in the Global Information Department of Kanazawa Technical College.</li>
-          <li>2021: Graduated from International College of Technology, Kanazawa.</li>
-          <li>2021: Enrolled in the Department of Computer Science and Engineering at the Kanazawa Institute of Technology</li>
+          {hist.school.map((data) => (
+            <li>{data.history}</li>
+          ))}
         </ul>
-      </div>
+        <Topic>Internship</Topic>
+        <ul>
+          {hist.intern.map((inte) => (
+            <li>{inte.history}</li>
+          ))}
+        </ul>
+      </Container>
     </>
   )
 }
