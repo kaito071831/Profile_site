@@ -11,6 +11,11 @@ export const ICStyle = styled.div`
   text-align: center;
 `;
 
+const TitleFont = styled.h2`
+  @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+  font-family: 'Architects Daughter', cursive;
+`;
+
 const IntroCard: React.FC<Props> = (props) => {
   const title = props.title
   const plain  = props.plain
@@ -19,7 +24,7 @@ const IntroCard: React.FC<Props> = (props) => {
     <>
       <article>
         <ICStyle>
-          <h2><a id={id}>{title}</a></h2>
+          <TitleFont id={id}>{title}</TitleFont>
         </ICStyle>
         <div>
           {plain}
