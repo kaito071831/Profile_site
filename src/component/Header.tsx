@@ -12,7 +12,7 @@ const NavUl = styled.ul`
 const NavLi = styled.li`
   width: 24.9%;
   text-align: center;
-  background-color: #333;
+  background-color: #fff;
   display: inline-block;
   margin: 0px 0.5px;
   height: 30px;
@@ -20,11 +20,13 @@ const NavLi = styled.li`
 
 const NavA = styled.a`
   text-decoration: none;
-  color: #fff;
   font-weight: bold;
   display: block;
   height: 100%;
   width: 100%;
+  color: transparent;
+  background: linear-gradient(0deg, #212121 0%, #424242 60%, #FAFAFA 70%, #424242 80%, #212121 90% 100%); 
+	-webkit-background-clip: text;
 `;
 
 const HeadTitle = styled.h1`
@@ -42,8 +44,8 @@ export const Header: React.FC =  () => {
         <nav>
           <HeadTitle>Kaito Sakao Profile</HeadTitle>
           <NavUl>
-            {Menu.menu.map((topic) => (
-              <NavLi><NavA href={topic.URL}>{topic.title}</NavA></NavLi>
+            {Menu.menu.map((topic, index) => (
+              <NavLi key={index}><NavA href={topic.URL}>{topic.title}</NavA></NavLi>
             ))}
           </NavUl>
         </nav>

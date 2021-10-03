@@ -11,14 +11,14 @@ export const History: React.FC = () => {
       <Container maxWidth="md">
         <Topic>Educational background</Topic>
         <ul>
-          {hist.school.map((data) => (
-            <li>{data.history}</li>
+          {hist.school.map((data, index) => (
+            <li key={index}>{data.history}</li>
           ))}
         </ul>
         <Topic>Internship</Topic>
         <ul>
-          {hist.intern.map((inte) => (
-            <li>{inte.history}</li>
+          {hist.intern.map((inte, index) => (
+            <li key={index}>{inte.history}</li>
           ))}
         </ul>
       </Container>

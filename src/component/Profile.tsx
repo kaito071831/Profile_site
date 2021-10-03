@@ -24,8 +24,8 @@ export const Profile: React.FC = () => {
           <Grid item xs>
             <table>
               <tbody>
-                {MyProf.profile.map((content) => (
-                  <tr>
+                {MyProf.profile.map((content, index) => (
+                  <tr key={index}>
                     <td><GTitle>{content.title}</GTitle></td>
                     <td>{content.body}</td>
                   </tr>

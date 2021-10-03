@@ -13,8 +13,8 @@ export const Hobby: React.FC = () => {
   return(
     <>
       <Container maxWidth="lg">
-        {Data.hobby.map((item) => (
-          <HStyle>
+        {Data.hobby.map((item, index) => (
+          <HStyle key={index}>
             <HobbyCard name = {item.name} />
           </HStyle>
         ))}
