@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { HFont } from "../App";
 
 export const LCardStyle = styled.div`
   display: block;
@@ -16,7 +17,7 @@ const LangCard: React.FC<Props> = ({name, image}) => {
     <>
       <LCardStyle>
         <img src={image} alt="" />
-        <p>{name}</p>
+        <HFont>{name}</HFont>
       </LCardStyle>
     </>
   )

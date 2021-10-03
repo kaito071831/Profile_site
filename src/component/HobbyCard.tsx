@@ -7,6 +7,7 @@ import Anime from '../image/anime.png';
 import Comic from '../image/comic.png';
 import Cycling from '../image/Cycling.png';
 import Beer from '../image/Beer.png';
+import { HFont } from '../App';
 
 type Props = {
   name: string;
@@ -34,7 +35,7 @@ export const HobbyCard: React.FC<Props> = ({ name }) => {
               return <img src={Beer}/>
           }
         })()}
-        <p>{name}</p>
+        <HFont>{name}</HFont>
       </HCardStyle>
     </>
   )

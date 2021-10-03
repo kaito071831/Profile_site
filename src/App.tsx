@@ -25,14 +25,20 @@ const FooterStyle = styled.footer`
   text-align: center;
 `;
 
+export const BasicFont = styled.a`
+  font-family: 'Roboto', sans-serif;
+`;
+
+export const HFont = BasicFont.withComponent('p');
+
 const App:React.FC = () => {
   return(
     <>
+      
       {/* ヘッダー */}
       <HeaderStyle>
         <Header />
       </HeaderStyle>
-
       {/* ボディー */}
       <BodyStyle>
         <Container maxWidth="lg">

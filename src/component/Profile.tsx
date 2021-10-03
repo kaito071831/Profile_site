@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { Container, Grid } from '@mui/material';
 import { ICStyle } from './IntroCard';
 import MyProf from '../json/profile.json';
+import { BasicFont } from '../App';
 
 const GTitle = styled.a`
-  @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
   font-family: 'Bonheur Royale', cursive;
   margin-right: 10px;
 `;
+
+
 
 export const Profile: React.FC = () => {
   return(
@@ -27,7 +29,7 @@ export const Profile: React.FC = () => {
                 {MyProf.profile.map((content, index) => (
                   <tr key={index}>
                     <td><GTitle>{content.title}</GTitle></td>
-                    <td>{content.body}</td>
+                    <td><BasicFont>{content.body}</BasicFont></td>
                   </tr>
                 ))}
               </tbody>
