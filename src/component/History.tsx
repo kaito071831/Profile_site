@@ -1,10 +1,7 @@
 import React from "react";
 import hist from '../json/history.json';
 import { Container } from '@mui/material';
-import { HCardStyle } from "./HobbyCard";
-import { BasicFont } from "../App";
-
-const Topic = HCardStyle.withComponent('h3')
+import { BasicFont, Topic } from "../App";
 
 export const History: React.FC = () => {
   return(

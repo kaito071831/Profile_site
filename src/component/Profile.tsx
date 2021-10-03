@@ -2,16 +2,13 @@ import React from 'react';
 import Image from '../image/ProfileImg.png';
 import styled from "styled-components";
 import { Container, Grid } from '@mui/material';
-import { ICStyle } from './IntroCard';
 import MyProf from '../json/profile.json';
-import { BasicFont } from '../App';
+import { BasicFont, CardStyle } from '../App';
 
 const GTitle = styled.a`
-  font-family: 'Bonheur Royale', cursive;
+  font-family: 'Anton', sans-serif;
   margin-right: 10px;
 `;
-
-
 
 export const Profile: React.FC = () => {
   return(
@@ -19,9 +16,9 @@ export const Profile: React.FC = () => {
       <Container maxWidth="md">
         <Grid container spacing={0}>
           <Grid item xs>
-            <ICStyle>
+            <CardStyle>
             <img src={Image} />
-            </ICStyle>
+            </CardStyle>
           </Grid>
           <Grid item xs>
             <table>

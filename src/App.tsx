@@ -31,10 +31,17 @@ export const BasicFont = styled.a`
 
 export const HFont = BasicFont.withComponent('p');
 
+export const CardStyle = styled.div`
+  text-align: center;
+`;
+
+export const Topic = styled(CardStyle.withComponent('h3'))`
+  font-family: 'Anton', sans-serif;
+`;
+
 const App:React.FC = () => {
   return(
     <>
-      
       {/* ヘッダー */}
       <HeaderStyle>
         <Header />

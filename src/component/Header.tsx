@@ -26,10 +26,12 @@ const NavA = styled.a`
   width: 100%;
   color: transparent;
   background: linear-gradient(0deg, #212121 0%, #424242 60%, #FAFAFA 70%, #424242 80%, #212121 90% 100%); 
-	-webkit-background-clip: text;
+  -webkit-background-clip: text;
 `;
 
 const HeadTitle = styled.h1`
+  font-family: 'Bonheur Royale', cursive;
+  font-size: 48px;
   text-align: center;
   vertical-align: middle;
   margin: 0;

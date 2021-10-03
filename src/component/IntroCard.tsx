@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
+import { CardStyle } from '../App';
 
 type Props = {
   title: string;
   plain: JSX.Element;
   id: string;
 }
-
-export const ICStyle = styled.div`
-  text-align: center;
-`;
 
 const TitleFont = styled.h2`
   font-family: 'Architects Daughter', cursive;
@@ -22,9 +19,9 @@ const IntroCard: React.FC<Props> = (props) => {
   return(
     <>
       <article>
-        <ICStyle>
+        <CardStyle>
           <TitleFont id={id}>{title}</TitleFont>
-        </ICStyle>
+        </CardStyle>
         <div>
           {plain}
         </div>

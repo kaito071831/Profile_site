@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 // 画像パス
 import Karaoke from '../image/karaoke.png';
@@ -8,19 +7,16 @@ import Comic from '../image/comic.png';
 import Cycling from '../image/Cycling.png';
 import Beer from '../image/Beer.png';
 import { HFont } from '../App';
+import { CardStyle } from '../App';
 
 type Props = {
   name: string;
 }
 
-export const HCardStyle = styled.div`
-  text-align: center;
-`;
-
 export const HobbyCard: React.FC<Props> = ({ name }) => {
   return(
     <>
-      <HCardStyle>
+      <CardStyle>
         {(()=>{
           switch(name){
             case "Karaoke":
@@ -36,7 +32,7 @@ export const HobbyCard: React.FC<Props> = ({ name }) => {
           }
         })()}
         <HFont>{name}</HFont>
-      </HCardStyle>
+      </CardStyle>
     </>
   )
 }
