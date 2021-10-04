@@ -69,6 +69,21 @@ const Pages = (Component: React.FC) => {
   )
 }
 
+// GitHub Pages用App関数
+// const App: React.FC = () => {
+//   return(
+//     <>
+//       <BrowserRouter>
+//         <Router>
+//           <Switch>
+//             <Route exact path="/kaito071831_Profile">{Pages(Top)}</Route>
+//           </Switch>
+//         </Router>
+//       </BrowserRouter>
+//     </>
+//   )
+// }
+
 const App: React.FC = () => {
   return(
     <>
