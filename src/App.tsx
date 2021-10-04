@@ -1,10 +1,17 @@
 import React from 'react';
+import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import { Header } from './component/Header';
-import Body from './component/Body';
 import { Footer } from './component/Footer';
 import { Container } from '@mui/material';
 import styled from "styled-components";
 import Background from './image/background.jpg';
+
+//トップページ
+import Top from './pages/Top';
+
+//実験用ページ
+import Experiment from './pages/Experiment';
 
 const HeaderStyle = styled.div`
   background-color: black;
@@ -39,17 +46,18 @@ export const Topic = styled(CardStyle.withComponent('h3'))`
   font-family: 'Anton', sans-serif;
 `;
 
-const App:React.FC = () => {
+const Pages = (Component: React.FC) => {
   return(
     <>
       {/* ヘッダー */}
       <HeaderStyle>
         <Header />
       </HeaderStyle>
+
       {/* ボディー */}
       <BodyStyle>
         <Container maxWidth="lg">
-          <Body />
+          <Component />
         </Container>
       </BodyStyle>
 
@@ -57,6 +65,21 @@ const App:React.FC = () => {
       <FooterStyle>
         <Footer />
       </FooterStyle>
+    </>
+  )
+}
+
+const App: React.FC = () => {
+  return(
+    <>
+      <BrowserRouter>
+        <Router>
+          <Switch>
+            <Route path="/practice">{Pages(Experiment)}</Route>
+            <Route exact path="/">{Pages(Top)}</Route>
+          </Switch>
+        </Router>
+      </BrowserRouter>
     </>
   )
 }
