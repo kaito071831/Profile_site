@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df855528.chunk.css",
+    "main.js": "/static/js/main.f27454de.chunk.js",
+    "main.js.map": "/static/js/main.f27454de.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.54c195ff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.54c195ff.js.map",
+    "static/js/2.007141dc.chunk.js": "/static/js/2.007141dc.chunk.js",
+    "static/js/2.007141dc.chunk.js.map": "/static/js/2.007141dc.chunk.js.map",
+    "static/js/3.c3553940.chunk.js": "/static/js/3.c3553940.chunk.js",
+    "static/js/3.c3553940.chunk.js.map": "/static/js/3.c3553940.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.df855528.chunk.css.map": "/static/css/main.df855528.chunk.css.map",
+    "static/js/2.007141dc.chunk.js.LICENSE.txt": "/static/js/2.007141dc.chunk.js.LICENSE.txt",
+    "static/media/Beer.95882f1e.png": "/static/media/Beer.95882f1e.png",
+    "static/media/Cycling.0551d43b.png": "/static/media/Cycling.0551d43b.png",
+    "static/media/JavaScript.d14f59a9.png": "/static/media/JavaScript.d14f59a9.png",
+    "static/media/Ruby.9fd28d99.png": "/static/media/Ruby.9fd28d99.png",
+    "static/media/anime.f92cb448.png": "/static/media/anime.f92cb448.png",
+    "static/media/background.f3c71e4a.jpg": "/static/media/background.f3c71e4a.jpg",
+    "static/media/comic.b149f780.png": "/static/media/comic.b149f780.png",
+    "static/media/karaoke.91f20149.png": "/static/media/karaoke.91f20149.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54c195ff.js",
+    "static/js/2.007141dc.chunk.js",
+    "static/css/main.df855528.chunk.css",
+    "static/js/main.f27454de.chunk.js"
+  ]
+}
