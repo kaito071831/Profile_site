@@ -9,12 +9,14 @@ export const History: React.FC = () => {
       <Container maxWidth="md">
         <Topic>Educational background</Topic>
         <ul>
+          {/* JSONファイルから学歴を読み出し */}
           {hist.school.map((data, index) => (
             <li key={index}><BasicFont>{data.history}</BasicFont></li>
           ))}
         </ul>
         <Topic>Internship</Topic>
         <ul>
+          {/* JSONファイルからインターンシップ参加歴を読み出し */}
           {hist.intern.map((inte, index) => (
             <li key={index}><BasicFont>{inte.history}</BasicFont></li>
           ))}

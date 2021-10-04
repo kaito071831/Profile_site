@@ -46,6 +46,7 @@ export const Header: React.FC =  () => {
         <nav>
           <HeadTitle>Kaito Sakao Profile</HeadTitle>
           <NavUl>
+            {/* JSONからナビゲーションメニューの内容を読み出し */}
             {Menu.menu.map((topic, index) => (
               <NavLi key={index}><NavA href={topic.URL}>{topic.title}</NavA></NavLi>
             ))}

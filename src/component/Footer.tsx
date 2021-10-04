@@ -24,6 +24,7 @@ export const Footer: React.FC = () => {
     <>
       <Container>
         <FooterArea position="left"/>
+        {/* 製作者表示 */}
         <FooterArea position="center">
           <a>©Kaito Sakao 2021</a>
         </FooterArea>
