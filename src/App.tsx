@@ -4,22 +4,18 @@ import Body from './component/Body';
 import { Footer } from './component/Footer';
 import { Container } from '@mui/material';
 import styled from "styled-components";
+import Background from './image/background.jpg';
 
 const HeaderStyle = styled.div`
   background-color: black;
 `;
 
 const BodyStyle = styled.div`
-  /* 背景画像決まったら削除 */
-  background-color: #b0c4de;
-  padding: 25px 0px 10px 0px;
-
-  /* 背景画像決まったらコメント解除
-  background-image: url();
+  background-image: url(${Background});
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding: 25px 0px 10px 0px; */
+  padding: 25px 0px 10px 0px;
 `;
 
 const FooterStyle = styled.footer`

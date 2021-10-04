@@ -17,6 +17,7 @@ export const HobbyCard: React.FC<Props> = ({ name }) => {
   return(
     <>
       <CardStyle>
+        
         {/* 受け取ったpropsに応じて表示する画像を変更 */}
         {(()=>{
           switch(name){

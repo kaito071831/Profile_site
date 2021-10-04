@@ -23,6 +23,7 @@ export const Profile: React.FC = () => {
           <Grid item xs>
             <table>
               <tbody>
+                
                 {/* JSONファイルからプロフィールを読み出し */}
                 {MyProf.profile.map((content, index) => (
                   <tr key={index}>

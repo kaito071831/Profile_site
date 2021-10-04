@@ -13,6 +13,7 @@ export const Hobby: React.FC = () => {
   return(
     <>
       <Container maxWidth="lg">
+        
         {/* JSONファイルから趣味を読み出し */}
         {Data.hobby.map((item, index) => (
           <HStyle key={index}>
