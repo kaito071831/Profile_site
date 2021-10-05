@@ -69,21 +69,7 @@ const Pages = (Component: React.FC) => {
   )
 }
 
-// GitHub Pages用App関数
-// const App: React.FC = () => {
-//   return(
-//     <>
-//       <BrowserRouter>
-//         <Router>
-//           <Switch>
-//             <Route exact path="/kaito071831_Profile">{Pages(Top)}</Route>
-//           </Switch>
-//         </Router>
-//       </BrowserRouter>
-//     </>
-//   )
-// }
-
+// 通常のルーティング用App関数
 const App: React.FC = () => {
   return(
     <>
@@ -98,5 +84,20 @@ const App: React.FC = () => {
     </>
   )
 }
+
+// GitHub Pages用App関数
+// const App: React.FC = () => {
+//   return(
+//     <>
+//       <BrowserRouter>
+//         <Router>
+//           <Switch>
+//             <Route exact path={process.env.PUBLIC_URL + '/'}>{Pages(Top)}</Route>
+//           </Switch>
+//         </Router>
+//       </BrowserRouter>
+//     </>
+//   )
+// }
 
 export default App;
