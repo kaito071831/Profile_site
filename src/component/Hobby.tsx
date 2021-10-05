@@ -3,10 +3,21 @@ import { Container } from '@mui/material';
 import { HobbyCard } from './HobbyCard';
 import Data from '../json/hobby.json';
 import styled from "styled-components";
+import {sp, tab, pc} from '../media';
 
 const HStyle = styled.div`
-  display: inline-block;
-  margin-right: 20px;
+  ${sp`
+    display: block;
+    width: 100%;
+  `}
+  ${tab`
+    display: block;
+    width: 100%;
+  `}
+  ${pc`
+    display: inline-box;
+    margin-right: 20px;
+  `}
 `;
 
 export const Hobby: React.FC = () => {

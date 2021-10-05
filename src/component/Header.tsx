@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Menu from '../json/nav.json';
+import { pc, sp, tab} from '../media';
 
 const NavUl = styled.ul`
   list-style: none;
@@ -10,12 +11,24 @@ const NavUl = styled.ul`
 `;
 
 const NavLi = styled.li`
-  width: 24.9%;
   text-align: center;
   background-color: #fff;
-  display: inline-block;
-  margin: 0px 0.5px;
   height: 30px;
+  ${sp`
+    display: block;
+    width: 100%;
+    border: 1px solid;
+  `}
+  ${tab`
+    display: block;
+    width: 100%;
+    border: 1px solid;
+  `}
+  ${pc`
+    display: inline-block;
+    width: 24.9%;
+    margin: 0px 0.5px;
+  `}
 `;
 
 const NavA = styled.a`

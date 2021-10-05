@@ -2,6 +2,7 @@ import React from "react";
 import LangCard from "./LangCard";
 import styled from "styled-components";
 import { Container } from '@mui/material';
+import {sp, tab, pc} from '../media';
 
 // 画像パス
 import HTML from "../image/html5.png";
@@ -16,6 +17,17 @@ import Ruby from "../image/Ruby.png";
 export const LangStyle = styled.div<{scope:string}>`
   display: inline-box;
   width: ${(props) => (props.scope)};
+  ${sp`
+    display: block;
+    width: 100%;
+  `}
+  ${tab`
+    display: block;
+    width: 100%;
+  `}
+  ${pc`
+    display: inline-box;
+  `}
 `;
 
 export const Language: React.FC = () => {
