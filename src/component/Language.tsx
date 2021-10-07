@@ -15,18 +15,18 @@ import Ruby from "../image/Ruby.png";
 
 
 export const LangStyle = styled.div<{scope:string}>`
-  display: inline-box;
+  display: inline-block;
   width: ${(props) => (props.scope)};
   ${sp`
     display: block;
     width: 100%;
   `}
   ${tab`
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 50%;
   `}
   ${pc`
-    display: inline-box;
+    display: inline-block;
   `}
 `;
 
@@ -61,21 +61,19 @@ export const Language: React.FC = () => {
           </LangStyle>
         </div>
         <div>
-          <LangStyle scope="20%">
+          <LangStyle scope="33%">
             <LangCard
               name = 'Python'
               image = {Python}
             />
           </LangStyle>
-          <LangStyle scope="20%"/>
-          <LangStyle scope="20%">
+          <LangStyle scope="33%">
             <LangCard
               name = 'PHP'
               image = {PHP}
             />
           </LangStyle>
-          <LangStyle scope="20%"/>
-          <LangStyle scope="20%">
+          <LangStyle scope="33%">
             <LangCard
               name = 'Ruby'
               image = {Ruby}

@@ -11,11 +11,12 @@ const HStyle = styled.div`
     width: 100%;
   `}
   ${tab`
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
   `}
   ${pc`
-    display: inline-box;
+    display: inline-block;
     margin-right: 20px;
   `}
 `;
