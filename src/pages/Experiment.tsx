@@ -1,6 +1,8 @@
 // Hooksに必要な関数をインポート
-import React, { useState, useEffect, createContext, useReducer } from "react";
+import React, { useState, useEffect, createContext, useReducer, useCallback } from "react";
 import { StageA } from '../component/Experiment/StageA';
+import { Count } from '../component/Experiment/Count';
+import { Button } from '../component/Experiment/Button';
 
 // コンテクストの作成
 export const CountContext = createContext(0);
@@ -69,6 +71,10 @@ const Experiment: React.FC = () => {
   useEffect(() => {
     document.title = `${count}`
     },[count]);
+
+  // useCallback関数を用いてcountが同じであれば前回のcountを再利用する
+  const incrementCounter = useCallback(() => setCount(count + 1),[count]);
+
   return(
     <>
       <h1>実験ページテスト</h1>
@@ -100,6 +106,10 @@ const Experiment: React.FC = () => {
           <StageA />
         </CountContext.Provider>
       </div>
+
+      {/* useCallback用 */}
+      <Count text="+1ボタン" countState={count} />
+      <Button handleClick={incrementCounter} value={'+1ボタン'}/>
     </>
   )
 }
