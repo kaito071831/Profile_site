@@ -1,5 +1,5 @@
 // Hooksに必要な関数をインポート
-import React, { useState, useEffect, createContext, useReducer, useCallback } from "react";
+import React, { useState, useEffect, createContext, useReducer, useCallback ,useMemo} from "react";
 import { StageA } from '../component/Experiment/StageA';
 import { Count } from '../component/Experiment/Count';
 import { Button } from '../component/Experiment/Button';
@@ -75,6 +75,17 @@ const Experiment: React.FC = () => {
   // useCallback関数を用いてcountが同じであれば前回のcountを再利用する
   const incrementCounter = useCallback(() => setCount(count + 1),[count]);
 
+  // useMemo用state定義
+  const [count2, setCount2] = useState(0);
+  const plus2 = () => setCount2(count2 + 2);
+
+  // useMemoを使って関数の結果を記録
+  const square = useMemo(() => {
+    let i = 0
+    while(i < 2000000) i++
+    return count2 * count2
+  },[count2])
+
   return(
     <>
       <h1>実験ページテスト</h1>
@@ -110,6 +121,10 @@ const Experiment: React.FC = () => {
       {/* useCallback用 */}
       <Count text="+1ボタン" countState={count} />
       <Button handleClick={incrementCounter} value={'+1ボタン'}/>
+
+      {/* useMemo用 */}
+      <div>square:{square}</div>
+      <button onClick={plus2}>increment</button>
     </>
   )
 }
