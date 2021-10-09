@@ -1,5 +1,5 @@
 // Hooksに必要な関数をインポート
-import React, { useState, useEffect, createContext, useReducer, useCallback ,useMemo} from "react";
+import React, { useState, useEffect, createContext, useReducer, useCallback, useMemo, useRef} from "react";
 import { StageA } from '../component/Experiment/StageA';
 import { Count } from '../component/Experiment/Count';
 import { Button } from '../component/Experiment/Button';
@@ -86,6 +86,14 @@ const Experiment: React.FC = () => {
     return count2 * count2
   },[count2])
 
+  // useRefを用いて現在のテキストボックスの値をstateにセットする
+  const inputEL = useRef<HTMLInputElement>(null);
+  const [text, setText] = useState("");
+  const handClick = () => {
+    setText(inputEL.current!.value);
+  }
+
+  console.log("レンダリング");
   return(
     <>
       <h1>実験ページテスト</h1>
@@ -125,6 +133,13 @@ const Experiment: React.FC = () => {
       {/* useMemo用 */}
       <div>square:{square}</div>
       <button onClick={plus2}>increment</button>
+
+      {/* useRef用 */}
+      <div>
+        <input ref={inputEL} type="text"/>
+        <button onClick={handClick}>Set text</button>
+        <p>テキスト：{text}</p>
+      </div>
     </>
   )
 }
