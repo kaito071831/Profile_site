@@ -12,6 +12,7 @@ import Top from './pages/Top';
 
 //実験用ページ
 import Experiment from './pages/Experiment';
+import Skill from './pages/Skill';
 
 const HeaderStyle = styled.div`
   background-color: black;
@@ -76,6 +77,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Router>
           <Switch>
+            <Route path="/skill">{Pages(Skill)}</Route>
             <Route path="/practice">{Pages(Experiment)}</Route>
             <Route exact path="/">{Pages(Top)}</Route>
           </Switch>
