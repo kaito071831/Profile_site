@@ -70,36 +70,20 @@ const Pages = (Component: React.FC) => {
   )
 }
 
-// 通常のルーティング用App関数
 const App: React.FC = () => {
   return(
     <>
       <BrowserRouter>
         <Router>
           <Switch>
-            <Route path="/skill">{Pages(Skill)}</Route>
-            <Route path="/practice">{Pages(Experiment)}</Route>
-            <Route exact path="/">{Pages(Top)}</Route>
+            <Route path={process.env.PUBLIC_URL + '/skill'}>{Pages(Skill)}</Route>
+            <Route path={process.env.PUBLIC_URL + '/practice>'}>{Pages(Experiment)}</Route>
+            <Route exact path={process.env.PUBLIC_URL + '/'}>{Pages(Top)}</Route>
           </Switch>
         </Router>
       </BrowserRouter>
     </>
   )
 }
-
-// GitHub Pages用App関数
-// const App: React.FC = () => {
-//   return(
-//     <>
-//       <BrowserRouter>
-//         <Router>
-//           <Switch>
-//             <Route exact path={process.env.PUBLIC_URL + '/'}>{Pages(Top)}</Route>
-//           </Switch>
-//         </Router>
-//       </BrowserRouter>
-//     </>
-//   )
-// }
 
 export default App;
