@@ -12,6 +12,7 @@ import JavaScript from "../image/JavaScript.png";
 import Python from "../image/Python.png";
 import PHP from "../image/PHP.png";
 import Ruby from "../image/Ruby.png";
+import Go from "../image/Go.png";
 
 
 export const LangStyle = styled.div<{scope:string}>`
@@ -61,22 +62,28 @@ export const Language: React.FC = () => {
           </LangStyle>
         </div>
         <div>
-          <LangStyle scope="33%">
+          <LangStyle scope="25%">
             <LangCard
               name = 'Python'
               image = {Python}
             />
           </LangStyle>
-          <LangStyle scope="33%">
+          <LangStyle scope="25%">
             <LangCard
               name = 'PHP'
               image = {PHP}
             />
           </LangStyle>
-          <LangStyle scope="33%">
+          <LangStyle scope="25%">
             <LangCard
               name = 'Ruby'
               image = {Ruby}
+            />
+          </LangStyle>
+          <LangStyle scope="25%">
+            <LangCard
+              name = 'Go'
+              image = {Go}
             />
           </LangStyle>
         </div>
